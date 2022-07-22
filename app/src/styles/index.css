@@ -13,8 +13,12 @@
   --color-neutral-dark-blue: hsl(218, 23%, 16%);
   /* Quote desktop */
   --font-size-large: 1.75rem;
+  /* Quote mobile */
+  --font-size-regular: 1.5rem;
   /* id desktop */
   --font-size-small: 0.875rem;
+  /* id desktop */
+  --font-size-smaller: 0.75rem;
 }
 
 body {

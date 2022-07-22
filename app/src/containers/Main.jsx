@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
 import styles from "../styles/Main.module.css";
 
 function Main() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth < 550) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  });
+
   return (
     <>
       <main className={styles.Main}>
@@ -11,7 +22,11 @@ function Main() {
           and taking action.”
         </p>
         <img
-          src="./assets/images/pattern-divider-desktop.svg"
+          src={
+            isMobile
+              ? "./assets/images/pattern-divider-mobile.svg"
+              : "./assets/images/pattern-divider-desktop.svg"
+          }
           alt="divider"
           className={styles.divider}
         />

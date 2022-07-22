@@ -26,6 +26,7 @@
 
 .divider {
   margin-top: 1.25rem;
+  max-width: 100%;
 }
 
 .button {
@@ -43,6 +44,30 @@
   transition: all 0.1s ease-in-out;
 }
 
-.button:hover {
+.button:hover,
+.button:active {
   box-shadow: 0px 0px 40px #52ffa8;
+}
+
+@media screen and (max-width: 550px) {
+  .Main {
+    min-height: 19.75rem;
+    width: min(90vw, 21.5rem);
+    padding: 2.375rem 1.375em;
+    gap: 1.5rem;
+    border-radius: 0.625rem;
+  }
+
+  .adviceId {
+    font-size: var(--font-size-smaller);
+  }
+
+  .quote {
+    font-size: var(--font-size-regular);
+    line-height: 2rem;
+  }
+
+  .divider {
+    margin-top: 0;
+  }
 }
