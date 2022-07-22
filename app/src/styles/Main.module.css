@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--color-neutral-dark-grayish-blue);
-  height: 20.75rem;
+  min-height: 20.75rem;
   width: 33.75rem;
   border-radius: 1rem;
   padding: 3rem;
@@ -30,7 +30,7 @@
 
 .button {
   margin-top: -2rem;
-
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,4 +40,9 @@
   outline: none;
   border: none;
   background-color: var(--color-primary-neon-green);
+  transition: all 0.1s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 40px #52ffa8;
 }
