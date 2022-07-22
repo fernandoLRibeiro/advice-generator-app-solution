@@ -19,16 +19,19 @@ function Main() {
   }, []);
 
   const fetchData = () => {
-    axios.get("https://api.adviceslip.com/advice").then((res) => {
-      setData(res.data.slip);
-    });
+    console.log("called");
+    axios
+      .get(`https://api.adviceslip.com/advice?t=${Math.random()}`)
+      .then((res) => {
+        setData(res.data.slip);
+      });
   };
 
   return (
     <>
       <main className={styles.Main}>
         <h1 className={styles.adviceId}> ADVICE #{data?.id}</h1>
-        <p className={styles.quote}>“{data?.advice}”</p>
+        <p className={styles.quote}>"{`${data?.advice}`}"</p>
         <img
           src={
             isMobile
