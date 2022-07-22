@@ -1,0 +1,43 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-neutral-dark-grayish-blue);
+  height: 20.75rem;
+  width: 33.75rem;
+  border-radius: 1rem;
+  padding: 3rem;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.adviceId {
+  font-size: var(--font-size-small);
+  letter-spacing: 0.25em;
+  color: var(--color-primary-neon-green);
+}
+
+.quote {
+  font-size: var(--font-size-large);
+  line-height: 2.375rem;
+  text-align: center;
+  color: var(--color-primary-light-cyan);
+  letter-spacing: -0.01em;
+}
+
+.divider {
+  margin-top: 1.25rem;
+}
+
+.button {
+  margin-top: -2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  width: 4rem;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  background-color: var(--color-primary-neon-green);
+}
