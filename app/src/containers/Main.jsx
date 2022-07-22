@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-
+import axios from "axios";
 import styles from "../styles/Main.module.css";
 
 function Main() {
   const [isMobile, setIsMobile] = useState(false);
+  const [data, setData] = useState();
 
   window.addEventListener("resize", () => {
     if (window.innerWidth < 550) {
@@ -13,14 +14,21 @@ function Main() {
     }
   });
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
+    axios.get("https://api.adviceslip.com/advice").then((res) => {
+      setData(res.data.slip);
+    });
+  };
+
   return (
     <>
       <main className={styles.Main}>
-        <h1 className={styles.adviceId}> ADVICE #117 </h1>
-        <p className={styles.quote}>
-          “It is easy to sit up and take notice, what's difficult is getting up
-          and taking action.”
-        </p>
+        <h1 className={styles.adviceId}> ADVICE #{data?.id}</h1>
+        <p className={styles.quote}>“{data?.advice}”</p>
         <img
           src={
             isMobile
@@ -31,7 +39,7 @@ function Main() {
           className={styles.divider}
         />
       </main>
-      <button className={styles.button}>
+      <button className={styles.button} onClick={() => fetchData()}>
         <img src="./assets/images/icon-dice.svg" alt="dice" />
       </button>
     </>
