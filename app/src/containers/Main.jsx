@@ -4,7 +4,10 @@ import styles from "../styles/Main.module.css";
 
 function Main() {
   const [isMobile, setIsMobile] = useState(false);
-  const [data, setData] = useState();
+  const [data, setData] = useState({
+    id: "",
+    advice: "",
+  });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth < 550) {
@@ -30,8 +33,8 @@ function Main() {
   return (
     <>
       <main className={styles.Main}>
-        <h1 className={styles.adviceId}> ADVICE #{data?.id}</h1>
-        <p className={styles.quote}>"{`${data?.advice}`}"</p>
+        <h1 className={styles.adviceId}> ADVICE #{data.id}</h1>
+        <p className={styles.quote}>{`"${data.advice}"`}</p>
         <img
           src={
             isMobile
