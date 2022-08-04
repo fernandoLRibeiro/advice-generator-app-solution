@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - [Solution](https://www.frontendmentor.io/solutions/advice-generator-solution-built-with-react-MZcGty-U2w)
-- [Live Site](https://62db14606f2f610e8ea8df9d--unique-zuccutto-b3b2df.netlify.app/)
+- [Live Site](https://unique-zuccutto-b3b2df.netlify.app/)
 
 ## My process
 
